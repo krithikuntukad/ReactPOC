@@ -2172,7 +2172,7 @@ export default class DemoPageStyleOne extends Component {
                       })
                     }
                     keyIndex = keyIndex + 1
-
+                  
                     controlsArray.push(
                       <View key={keyIndex}>
                         <HTML html={text} imagesMaxWidth={Dimensions.get('window').width} decodeEntities={true} debug={true}
@@ -2181,7 +2181,9 @@ export default class DemoPageStyleOne extends Component {
                         {radioBtn}
                       </View>
                     )
+                
                   })
+                
                 } else if (controlItem.name == "Textbox") {
                   controlItem.children.map( (innerItem, innerItemIndex) =>{
                     if (innerItem.name == "FieldHeader") {

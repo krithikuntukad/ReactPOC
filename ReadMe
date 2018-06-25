@@ -1,0 +1,47 @@
+Please install following npm plugins
+
+
+1) npm install react-xml-parser - https://www.npmjs.com/package/react-xml-parser  
+
+
+2) npm install react-native-checkbox - https://www.npmjs.com/package/react-native-checkbox
+
+3) npm i radio-button-react-native - https://www.npmjs.com/package/radio-button-react-native  
+4)npm i react-native-render-html - https://www.npmjs.com/package/react-native-render-html
+
+5) npm install --save react-navigation   -https://www.npmjs.com/package/react-navigation
+6) npm i native-base     -https://www.npmjs.com/package/native-base
+7) npm install react-native-material-dropdown -https://www.npmjs.com/package/react-native-material-dropdown
+
+8) npm install html-entities-https://www.npmjs.com/package/html-entities 
+
+
+
+
+
+
+
+
+
+
+Following are used to fix build errors
+
+1) npm install rnpm -g  
+rnpm link react-native-vector-icons     - Error -   https://github.com/GeekyAnts/NativeBase/issues/72
+2) sudo chmod -R a+rwx /appfolder     -Error --In mac - Spawn error 
+
+Note - npm install    --is will solve most of the node package issues
+always run  sudo chmod -R a+rwx /appfolder in MAc after npm install
+
+To run your app on iOS:
+   cd /Users/sonatamobility/Desktop/Archana/ReactNativeProject/TestApp/TestApp
+   react-native run-ios
+   - or -
+   Open ios/TestApp.xcodeproj in Xcode
+   Hit the Run button
+To run your app on Android:
+   cd /Users/sonatamobility/Desktop/Archana/ReactNativeProject/TestApp/TestApp
+   Have an Android emulator running (quickest way to get started), or a device connected
+   react-native run-android
+
+

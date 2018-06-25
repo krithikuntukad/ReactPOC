@@ -52,7 +52,7 @@ export default class HomeScreen extends Component {
         <Content contentContainerStyle={{
           flex: 1,
         }}>
-          <Text> {"\n"}  </Text>
+        
           {/* <Text>Home Screen </Text> */}
           {/* <View style={{ width: 400, height: 80, backgroundColor: '#48d1cc' }}>
             <View >

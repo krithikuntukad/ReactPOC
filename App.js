@@ -54,8 +54,9 @@ const CustomDrawerContentComponent = (props) => (
   <Container>
     <Header style={{ height: 50, backgroundColor:'white'}}>
       <Body>
-        <Image style={{ width: 50, height: 50, borderRadius:50  }}
-          source={require('./Components/images/Entertainment.png')} />
+        {/* <Image style={{ width: 50, height: 50, borderRadius:50  }}
+          source={require('./Components/images/Entertainment.png')} /> */}
+          <Text>Welcome</Text>
       </Body>
     </Header>
     <Content>

@@ -2040,10 +2040,16 @@ export default class DemoPageStyleTwo extends Component {
 
 
   }
-  handleOnPress() {
-    this.setState({ value: 1 })
-  }
+ 
 
+  handleOnPress(radioBtnOption,indexVal){
+    console.log("radioBtnOptions")
+    console.log(this.state.radioBtnOptions)
+    //this.state.value = value
+    this.state.radioBtnOptions[indexVal] = 1
+    console.log(this.state.radioBtnOptions)
+    //  Alert.alert("radioBtnOptions")
+  }
   //handleOnPressFn = this.handleOnPress.bind(this);
   //htmlDecodeFn = this.htmlDecode.bind(this);
 
@@ -2056,6 +2062,7 @@ export default class DemoPageStyleTwo extends Component {
     var controlsArray = []
     xmlJson.push(xml)
     var keyIndex = 0;
+    var radioVal = 0
     xmlJson[0].children.map(function (currentSection, index) {
 
       //console.log("currentSection",index)
@@ -2142,29 +2149,28 @@ export default class DemoPageStyleTwo extends Component {
 
                         if (radioBtnOption.name == "ListItem") {
                           keyIndex = keyIndex + 1
-                          radioBtn.push(
-                            <View style={styles.radio} key={keyIndex}>
-           
-                              <Row size={12} style={styles.switchRow}>
-            <Col sm={2} ><Switch style={styles.switchIcon}
-            
-           onValueChange={() => {
-            Alert.alert('You tapped the button!');
-          }}
-    
-            /></Col>
-            <Col sm={9} style={{flex:1,justifyContent:'center'}}>  <Text  style={styles.swicthLable }>{radioBtnOption.attributes.value}</Text></Col>
-                             
-                        </Row>     
-                             
+                    
+                           radioBtn.push(
+                             <View style={styles.radio} key={keyIndex}>
+                               <Row size={12} style={styles.switchRow}>
+             <Col sm={2} ><Switch style={styles.switchIcon}
+            onValueChange={() => {
+             Alert.alert('You tapped the button!');
+           }}
+             /></Col>
+             <Col sm={9} style={{flex:1,justifyContent:'center'}}>  <Text  style={styles.swicthLable }>{radioBtnOption.attributes.value}</Text></Col>
                               
-                            </View>
-                          )
-                        }
-                      })
-                    }
+                         </Row>     
+                              
+                               
+                             </View>
+                           )
+                          }
+                        })
+                         }
+                    
                     keyIndex = keyIndex + 1
-
+                   
                     controlsArray.push(
                       <View key={keyIndex}>
                         <HTML html={text} imagesMaxWidth={Dimensions.get('window').width} decodeEntities={true} debug={true}
@@ -2173,6 +2179,7 @@ export default class DemoPageStyleTwo extends Component {
                         {radioBtn}
                       </View>
                     )
+                 
                   })
                 } else if (controlItem.name == "Textbox") {
                   controlItem.children.map(function (innerItem, innerItemIndex) {
